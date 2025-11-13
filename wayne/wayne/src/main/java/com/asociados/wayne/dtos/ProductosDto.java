@@ -1,6 +1,6 @@
 package com.asociados.wayne.dtos;
 
-public record ProductosDtos(
+public record ProductosDto(
         String nombre,
         String descripcion,
         Double precio,

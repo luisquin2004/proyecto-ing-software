@@ -1,14 +1,12 @@
 package com.asociados.wayne.service;
 
-import com.asociados.wayne.model.Empresa;
-
+import com.asociados.wayne.dtos.EmpresaDto;
 import java.util.List;
-import java.util.Optional;
 
 public interface EmpresaService {
 
-    List<Empresa> findAll();
+    List<EmpresaDto> findAll();
 
-    Optional<Empresa> findById(Integer id);
+    EmpresaDto findById(Integer id);
 
 }

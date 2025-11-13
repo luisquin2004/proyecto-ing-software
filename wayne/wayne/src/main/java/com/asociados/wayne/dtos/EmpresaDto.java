@@ -1,12 +1,14 @@
 package com.asociados.wayne.dtos;
 
+import com.asociados.wayne.model.Producto;
+
 import java.util.List;
 
-public record Empresa(
+public record EmpresaDto(
         String nombreEmpresa,
         String descripcionEmpresa,
         String logoEmpresa,
-        List<ProductosDtos> productos
+        List<Producto> productos
 
 ) {
 }

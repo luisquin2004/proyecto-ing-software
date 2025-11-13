@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Builder
@@ -25,6 +26,9 @@ public class Empresa {
     private String logo;
     private TipoEmpresa tipo;
     private LocalDateTime createdAt;
+
+    @OneToMany(mappedBy = "empresa", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Producto> productos;
 
     public enum TipoEmpresa {
         EXPORTADORA, IMPORTADORA, AMBAS

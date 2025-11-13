@@ -1,5 +1,6 @@
 package com.asociados.wayne.controller;
 
+import com.asociados.wayne.dtos.EmpresaDto;
 import com.asociados.wayne.model.Empresa;
 import com.asociados.wayne.model.Producto;
 import com.asociados.wayne.model.Transaccion;
@@ -35,13 +36,13 @@ public class ControllerWayne {
 	}
 
 	@GetMapping("/empresas")
-	public ResponseEntity<List<Empresa>> listEmpresas() {
+	public ResponseEntity<List<EmpresaDto>> listEmpresas() {
 		return ResponseEntity.ok(empresaService.findAll());
 	}
 
-	@GetMapping("/empresas/{id}/productos")
-	public ResponseEntity<List<Producto>> productosPorEmpresa(@PathVariable Integer id) {
-		return ResponseEntity.ok(productoService.findByEmpresaId(id));
+	@GetMapping("/empresas/{id}")
+	public ResponseEntity<EmpresaDto> productosPorEmpresa(@PathVariable Integer id) {
+		return ResponseEntity.ok(empresaService.findById(id));
 	}
 
 	// --- Productos ---
