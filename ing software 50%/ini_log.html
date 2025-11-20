@@ -4,26 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inicio</title>
+
+  <!-- Hoja de estilos externa -->
   <link rel="stylesheet" href="./style/ini_log_style.css" />
-<style>
-  .logo-3d {
-    animation: giro3D 5s linear infinite;
-    transform-style: preserve-3d;
-  }
 
-  @keyframes giro3D {
-    0% {
-      transform: rotateY(0deg);
+  <style>
+    /* Animación 3D del logo */
+    .logo-3d {
+      animation: giro3D 5s linear infinite;
+      transform-style: preserve-3d;
+      display: block;
+      margin: 0 auto;
     }
-    100% {
-      transform: rotateY(360deg);
-    }
-  }
-</style>
 
+    @keyframes giro3D {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    /* Ajustes básicos para íconos (por si no están en el CSS externo) */
+    .user-icon, .mail-icon {
+      width: 60px;
+      position: absolute;
+      top: 15px;
+    }
+
+    .user-icon {
+      right: 80px;
+    }
+
+    .mail-icon {
+      right: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- Botón hamburguesa -->
   <input type="checkbox" id="menu-toggle" />
   <label for="menu-toggle" id="menu-btn">
     <span></span>
@@ -31,25 +60,29 @@
     <span></span>
   </label>
 
+  <!-- Menú lateral -->
   <nav id="sidebar">
     <ul>
       <li><a href="ini_log.html">Inicio</a></li>
       <li><a href="emp_log.html">Empresas</a></li>
       <li><a href="tra_con_log.html">Transacciones</a></li>
-      <li><a href="cat_log.html">Catalogo</a></li>
+      <li><a href="cat_log.html">Catálogo</a></li>
       <li><a href="ayu_log.html">Ayuda</a></li>
     </ul>
   </nav>
 
-  <h1 class="header">Bienvenido</h1>
-<img src="./img/logo-wayne-corp.png" alt="Wayne Corp Logo" class="logo logo-3d" />
+  <!-- Contenido principal -->
+  <main>
+    <h1 class="header">Bienvenido</h1>
 
-  <img src="./img/usuario.png" alt="Usuario" class="user-icon" />
+    <img src="./img/logo-wayne-corp.png" alt="Wayne Corp Logo" class="logo-3d" />
 
-  <img src="./img/mensaje_azul.png" alt="Correo" class="mail-icon" />
+    <img src="./img/usuario.png" alt="Usuario" class="user-icon" />
+    <img src="./img/mensaje_azul.png" alt="Correo" class="mail-icon" />
+  </main>
 
   <footer>
-    <p>Maracaibo, Venezuela | Derechos Reservado ©</p>
+    <p>Maracaibo, Venezuela | Derechos Reservados ©</p>
   </footer>
 
 </body>
